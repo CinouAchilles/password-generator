@@ -37,7 +37,7 @@ btn_generator.onclick = function(){
 }
 function copyPassword(){
     let passw = document.getElementById("pass").innerHTML;
-    if (passw === 'Your Password will appear here' || passw === '') {
+    if (passw === 'Your Password will appear here' || passw === '' || passw === 'choose another number') {
         Swal.fire({
             title: "Nothing To Copy!",
             text: "You clicked the button!",
