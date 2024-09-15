@@ -1,4 +1,4 @@
-
+let pswd_all ;
 function gene(low,upp,num,sym,leng){
 
     let chars = '';
@@ -21,7 +21,7 @@ function gene(low,upp,num,sym,leng){
 
 let btn_generator = document.getElementById("btn_gn");
 btn_generator.onclick = function(){
-
+    pswd_all = "";
     let lower = document.getElementById('lower').checked;
     let upper = document.getElementById('upper').checked;
     let num = document.getElementById('numb').checked;
@@ -30,27 +30,31 @@ btn_generator.onclick = function(){
     let leng = Number(document.getElementById("len").value);
     if(leng < 6|| leng > 20){
         h3.textContent = "choose another number ";
+        console.log(pswd_all);
     }else{
-        h3.textContent = gene(lower,upper,num,sym,leng);
+        pswd_all = gene(lower,upper,num,sym,leng);
+        h3.textContent = pswd_all;
+        console.log(pswd_all);
     }
 
 }
 function copyPassword(){
     let passw = document.getElementById("pass").innerHTML;
-    if (passw === 'Your Password will appear here' || passw === '' || passw === 'choose another number') {
+    if (!pswd_all || passw === "Choose a number between 6 and 20." || passw === 'Please select at least one option.') {
         Swal.fire({
             title: "Nothing To Copy!",
             text: "You clicked the button!",
             icon: "error"
           });        
           return;
+    }else{
+        navigator.clipboard.writeText(passw).then( ()=>{
+            Swal.fire({
+                title: "Done!",
+                text: "Password copied to clipboard!",
+                icon: "success"
+            });
+        });
     }
-    navigator.clipboard.writeText(passw).then( ()=>{
-        Swal.fire({
-            title: "Done!",
-            text: "Password copied to clipboard!",
-            icon: "success"
-          });
-    });
 }
 
