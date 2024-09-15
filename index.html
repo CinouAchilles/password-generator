@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="head">
+        <h1>Password Gen</h1>
+    </div>
+    <div class="container">
+        <div class="out_of_all">
+            <div class="inp">
+                <div class="lab_chk">
+                    <div class="dice">
+                        <label for="len">Pass Length: </label>
+                        <input type="number" name="len" id="len">
+                    </div>
+                </div>
+                <div class="lab_chk">
+                    <label for="lower">Include LowerCase</label>
+                    <input type="checkbox" name="one" id="lower">
+                </div>
+                <div class="lab_chk">
+                    <label for="upper">Include UpperCas</label>
+                    <input type="checkbox" name="one" id="upper">
+                </div>
+                <div class="lab_chk">
+                    <label for="numb">Include Numbers</label>
+                    <input type="checkbox" name="one" id="numb">
+                </div>
+                <div class="lab_chk">
+                    <label for="symbols">Include Symbols</label>
+                    <input type="checkbox" name="one" id="symbols">
+                </div>
+                <input type="button" id="btn_gn" value="generate">
+                <div class="output">
+                    <h3 id="pass">Your Password will appear here</h3>
+                    <button id="copy_btn" onclick="copyPassword()">Copy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

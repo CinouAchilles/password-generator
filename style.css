@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(52, 52, 52);
+    background-color: #f4f4f9;
+    display: flex;
+    height: 100vh !important;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+.out_of_all{
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    width: 440px;
+    transition: all ease-in-out 0.25s;
+
+}
+.inp{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 10px;
+}
+.head h1{
+    padding: 10px;
+    color: #333;
+}
+.lab_chk{
+    display: flex;
+    justify-content: space-between;
+    transition: all ease-in-out 0.2s;
+    padding: 10px;
+}
+.lab_chk:hover{
+    background-color: rgb(218, 218, 218);
+}
+
+.lab_chk input[type="checkbox"] {
+    transform: scale(1.2);
+}
+input[type="number"] {
+    width: 75px;
+    padding: 5px;
+    border: 0.5px #ccc solid;
+    border-radius: 10px;
+    font-size: 16px;
+
+}
+#btn_gn{
+    background-color: #007bff;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+#btn_gn:hover {
+    background-color: #0056b3;
+}
+
+.output{
+    margin-top: 20px;
+    position: relative;
+}
+#pass {
+    padding: 7px;
+    font-size: 18px;
+    text-align: center;
+    word-wrap: break-word;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#copy_btn {
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#copy_btn:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 600px) {
+    .out_of_all{
+        width: 350px;
+    }
+}
+
+@media (max-width: 365px){
+    .out_of_all{
+        width: 290px;
+    }
+    .inp{
+        gap: 20px;
+    }
+}
