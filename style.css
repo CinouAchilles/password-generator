@@ -86,6 +86,7 @@ input[type="number"] {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    display: none;
 }
 
 #copy_btn {
