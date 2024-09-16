@@ -27,6 +27,7 @@ btn_generator.onclick = function(){
     let num = document.getElementById('numb').checked;
     let sym = document.getElementById('symbols').checked;
     let h3 = document.getElementById("pass");
+    h3.style.display = "block";
     let leng = Number(document.getElementById("len").value);
     if(leng < 6|| leng > 20){
         h3.textContent = "choose another number ";
